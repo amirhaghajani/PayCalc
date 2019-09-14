@@ -26,6 +26,22 @@ namespace PayCalc.Controllers
             });
         }
 
+        [HttpGet("[action]")]
+        public IEnumerable<ViewModels.vmYear> GetYears()
+        {
+            var answer = new List<ViewModels.vmYear>(){
+                new ViewModels.vmYear(){
+                    year=1398,
+                    isCurrent=true
+                },
+                new ViewModels.vmYear(){
+                    year=1397,
+                    isCurrent=false
+                }
+            };
+            return answer;
+        }
+
         public class WeatherForecast
         {
             public string DateFormatted { get; set; }

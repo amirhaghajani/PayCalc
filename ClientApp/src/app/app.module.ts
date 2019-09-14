@@ -8,14 +8,19 @@ import {
   AppStore,
   appStoreProviders
 } from './app.store';
+import { FromYearComponent } from './from-year/from-year.component';
+
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FromYearComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [appStoreProviders],
   bootstrap: [AppComponent]
